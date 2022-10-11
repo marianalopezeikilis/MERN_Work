@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="row">
+            <h1>Calculadora</h1>
+        </div>
+        <div class="contenedorbot">
+            <div class="row">
+                <button onClick="pulsar(1)">1</button>
+                <button onClick="pulsar(2)">2</button>
+                <button onClick="pulsar(3)">3</button>
+                <button onClick="pulsar(4)">4</button>
+                <button onClick="pulsar(5)">5</button>
+                <button onClick="pulsar(6)">6</button>
+                <button onClick="pulsar(7)">7</button>
+                <button onClick="pulsar(8)">8</button>
+                <button onClick="pulsar(9)">9</button>
+                <button onClick="suma('')">+</button>
+                <button onClick="resta('')">-</button>
+                <button onClick="multiplicacion('')">x</button>
+                <button onClick="division('')">/</button>
+                <button onClick="borrar()">AC</button>
+                <button onClick="igualdad()">=</button>
+            </div>
+        </div>
+        <br>
+        <h1> <span type="text" id="display">0</span> </h1>
+    </div>
+
+    <script>
+        let estado = 0;
+        let display = document.getElementById("display");
+        let moment = 1;
+        let op = '';
+        let numeroviejo=0;
+
+        function pulsar(x) {
+            if (moment===2){
+                estado='';
+                moment=3;
+                actualizaDisplay();
+            }
+            console.log('este es el estado' + estado);
+            estado = estado * 10 + x;
+            console.log('este es el estado final' + estado);
+            actualizaDisplay()
+        }
+
+        function suma() {
+            if (moment==3){
+                operacion();
+            }
+            actualizaDisplay();
+            numeroviejo = estado;
+            actualizaDisplay();
+            moment = 2;
+            op = 'suma';
+        }
+
+        function resta() {
+            if (moment==3){
+                operacion();
+            }
+            actualizaDisplay();
+             numeroviejo = estado;
+            actualizaDisplay();
+            moment = 2;
+            op = 'resta';
+        }
+
+        function multiplicacion() {
+            if (moment==3){
+                operacion();
+            }
+            actualizaDisplay();
+             numeroviejo = estado;
+            actualizaDisplay();
+            moment = 2;
+            op = 'multiplicacion';
+
+        }
+
+        function division() {
+            if (moment==3){
+                operacion();
+            }
+            actualizaDisplay();
+             numeroviejo = estado;
+            actualizaDisplay();
+            moment = 2;
+            op = 'division';
+        }
+
+        function operacion() {
+            console.log('estado de operacion' + op);
+            if (op=='suma')
+            {
+                return estado=estado+numeroviejo;
+            } else if (op=='resta'){
+                return estado=numeroviejo-estado;
+            } else if (op=='multiplicacion'){
+                console.log('este es el estado'+estado);
+                console.log('este es el numero viejo'+numeroviejo);
+                return estado=estado*numeroviejo;
+            } else {return estado=numeroviejo/estado};
+        }
+
+        function borrar(){
+            moment=0;
+            estado=0;
+            numeroviejo=0;
+            operacion='';
+            actualizaDisplay(); 
+        }
+
+        function igualdad(){
+            operacion();
+            actualizaDisplay();
+            op='';
+        }
+
+        function actualizaDisplay() {
+          
+            display.innerText = estado;
+
+        }
+        actualizaDisplay();
+
+    </script>
+</body>
+
+</html>

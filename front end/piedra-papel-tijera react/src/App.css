@@ -1,0 +1,15 @@
+img {
+  width: 200px;
+  height: 200px;
+  max-height:100%; max-width:100%;
+  object-fit: contain;
+
+}
+
+.imagenes {
+  display: inline;
+  max-height:100%; max-width:100%;
+}
+
+.contenedor { text-align: center;
+}

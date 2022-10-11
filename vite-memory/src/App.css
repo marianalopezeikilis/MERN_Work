@@ -1,0 +1,19 @@
+.divimg {
+
+  background-color: gray;
+  width: 40px;
+  height: 40px;
+  margin:10px;
+}
+
+img{
+  width: 40px;
+  height: 40px;
+  margin:0px;
+
+}
+
+.c {
+  display:flex;
+}
+

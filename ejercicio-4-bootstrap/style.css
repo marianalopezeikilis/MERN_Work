@@ -1,0 +1,16 @@
+.articulo
+{background-color: #EEEEEE;
+padding:50px;
+margin-bottom: 50px;
+margin-top: 20px;}
+
+.contenedorcards{
+    margin: 20px;
+}
+
+img {
+    width: 100px;
+    height: 200px;
+    border-radius: 10px;
+}
+

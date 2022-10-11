@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>x
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+ 
+ 
+    Valor 1: <input type="text" id="in1"><br>
+    Valor 2: <input type="text" id="in2"><br>
+    <br>
+    Resultat: <h2 id="out"></h2>
+    <br>
+    <button onClick="suma()">Suma</button>
+ 
+    <br>
+    <br>
+    DNI: <input type="text" id="dni"><br>
+    <button onClick="revisarString('MariaNaaskdsLopezEikilis LuciaA')">Dar letra del DNI</button>
+    <h3 id="resultadoLetra"></h3>
+    <p id="resultadoComparacion"></p>
+ 
+ 
+    <script>
+ 
+let inputDNI = document.getElementById("dni");
+let resultadoLetra = document.getElementById("resultadoLetra");
+ 
+        let valor1 = document.getElementById("in1");
+        let valor2 = document.getElementById("in2");
+        let output = document.getElementById("out");
+ 
+       
+ 
+        function letraDni(){
+            let valordni = inputDNI.value * 1;
+            todoeldni = inputDNI.value 
+            numerosolo = todoeldni.match( /([-]?\d+)/g);
+            letrasola = todoeldni.match(/([A-Z])/g);
+            console.log('esta es la letra sola', letrasola);
+            let mensaje = "";
+            if(numerosolo<0 || numerosolo>99999999) {mensaje='Número ingresado no válido';console.log(mensaje);
+            } else {
+             let indexletra=numerosolo % 23;
+             let arrayletras = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
+            let letra = arrayletras[indexletra];
+            mensaje="La letra del DNI es "+ letra;
+            mensajecomparativo = '';
+        if(letra[0]==letrasola) {mensajecomparativo='La letra de DNI y el numero son correctos';}
+            else { mensajecomparativo='La letra no coincide con la letra ingresada en el DNI';}
+        }
+        
+         resultadoLetra.innerText=mensaje;
+         resultadoComparacion.innerText=mensajecomparativo;
+            // if (valordni % 2 == 0){
+            //     mensaje="DNI válido";
+            // } else {
+            //     mensaje = "DNI NO válido";
+            // }
+        }
+ 
+
+        function revisarString (str){ 
+  let mayusculas=str.match(/[A-Z]/g);
+  let minusculas=str.match(/[a-z]/g);
+console.log(str.match(/[A-Z]/g));
+  console.log(str.match(/[a-z]/g));
+  return mayusculas;
+  
+}
+// revisarString('MariaNaaskdsLopezEikilis LuciaA');
+console.log (mayusculas);
+console.log (minusculas);
+console.log ('gola')
+console.log (mayusculas.lenght);
+
+if(mayusculas.length>minusculas.length && minusculas.lenght !==0)
+  {
+    console.log('Hay más mayúsculas que minúsculas');
+  } else if (mayusculas.length===0) {
+    console.log('No hay mayúsculas');
+  } else if (minusculas.length===0){
+    console.log ('No hay minúsculas');
+  } else {
+    console.log('Hay más minúsculas que mayúsculas');
+  }
+ 
+ 
+    </script>
+</body>
+ 
+</html>

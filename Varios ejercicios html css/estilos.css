@@ -1,0 +1,184 @@
+body {
+    padding: 50px;
+    background-color: beige;
+}
+
+h1 {
+    color: brown;
+}
+
+h1.fnt-red {
+    color: red;
+}
+
+.fnt-blue {
+    color: blue;
+}
+
+#mariana_lopez {
+    color: red;
+    text-decoration: underline;
+}
+
+/* 
+    clase ".titulo": texto en color azul marino, tamaño de fuente 30px (font-size), texto en cursiva
+clase ".texto": texto en color azul oscuro, tamaño 15px
+clase ".destacado": texto en cursiva, texto en negrita */
+
+.titulo {
+    color: #000080;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.texto {
+    color: #00008B;
+    font-size: 15px;
+}
+
+.destacado {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* A PARTIR DE ACÁ ES PARA EL EJERCICIO DE BICICLETAS */
+
+
+.imgbike {
+    display: inline;
+    border-radius: 15px;
+    width: 90%;
+    height: 100%;
+    /* height: 300px;
+width: 300px; */
+    margin: 5%;
+    overflow: hidden;
+}
+
+.divbike {
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    min-width: 250px;
+    /* height: 900px; */
+
+}
+
+.contenedor {
+    text-align: center;
+    /* display: inline-block; */
+
+
+
+}
+
+.descripcion {
+    text-align: left;
+    padding: 10px;
+}
+
+#bodydebicicletas p {
+    overflow: auto;
+    margin: 5%;
+}
+
+div.iconos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img.favorito {
+    width: 15px;
+    display: inline-block;
+
+}
+
+img.chat {
+    width: 15px;
+    display: inline-block;
+
+
+}
+
+
+body {
+    font-family: Helvetica;
+
+}
+
+p.precio {
+    font-weight: bold;
+}
+
+
+div#menu {
+    height: 40px;
+    background-color: blue;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: white;
+    /* text-align: center; */
+    left: 0;
+    /* vertical-align: center; */
+    /* ESTO ES PARA QUE QUEDE CENTRADO EN VERTICAL! */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#menu p {
+    margin: 0%;
+}
+
+div#footer {
+    height: 40px;
+    background-color: red;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    left: 0;
+}
+
+body #volver4b {
+    text-align: center;
+}
+
+/* A PARTIR DE ACA ES 4B_2 */
+
+#div4b_2 {
+    background-color: #A52B2A;
+    width: 50%;
+    aspect-ratio: 3/2;
+    position: relative;
+}
+
+#body4b_2 p {
+    text-align: center;
+}
+
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 4px solid #A52B2A;
+    background-color:  beige;
+    position: absolute;
+}
+
+#circulo1 {
+    top:0;
+}
+
+#circulo2{
+    top:100px
+}
